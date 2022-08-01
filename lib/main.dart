@@ -1,8 +1,6 @@
 import 'package:destini_challenge_starting/story_brain.dart';
 import 'package:flutter/material.dart';
 
-//TODO: Step 15 - Run the app and see if you can see the screen update with the first story. Delete this TODO if it looks as you expected.
-
 void main() => runApp(Destini());
 
 class Destini extends StatelessWidget {
@@ -53,7 +51,7 @@ class _StoryPageState extends State<StoryPage> {
                 child: TextButton(
                   onPressed: () {
                     //Choice 1 made by user.
-                    //TODO: Step 18 - Call the nextStory() method from storyBrain and pass the number 1 as the choice made by the user.
+                    stroyBrain.nextStory(1);
                   },
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.red,
@@ -63,8 +61,7 @@ class _StoryPageState extends State<StoryPage> {
                     ),
                   ),
                   child: Text(
-                    //TODO: Step 13 - Use the storyBrain to get the text for choice 1.
-                    'Choice 1',
+                    stroyBrain.getChoice1(),
                   ),
                 ),
               ),
@@ -78,7 +75,7 @@ class _StoryPageState extends State<StoryPage> {
                 child: TextButton(
                   onPressed: () {
                     //Choice 2 made by user.
-                    //TODO: Step 19 - Call the nextStory() method from storyBrain and pass the number 2 as the choice made by the user.
+                    stroyBrain.nextStory(2);
                   },
                   style: TextButton.styleFrom(
                     primary: Colors.white,
@@ -88,8 +85,7 @@ class _StoryPageState extends State<StoryPage> {
                     ),
                   ),
                   child: Text(
-                    //TODO: Step 14 - Use the storyBrain to get the text for choice 2.
-                    'Choice 2',
+                    stroyBrain.getChoice2(),
                   ),
                 ),
               ),
